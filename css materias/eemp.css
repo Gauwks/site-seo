@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: black; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 4px black;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background-color: rgb(0, 0, 0);
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section.module p {
+    margin-bottom: 40px;
+}
+
+section.module:last-child {
+    margin-bottom: 0;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 2em; /* Alterado para unidade relativa */
+}
+
+section.module.content {
+    padding: 40px 0;
+    background: rgb(0, 0, 0);
+}
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.module.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%);
+}
+
+section.module.parallax-1 {
+    background-image: url("../img/empresas-1068x688.jpg");
+}
+
+section.module.parallax-2 {
+    background-image: url("https://www.projuris.com.br/wp-content/uploads/2021/11/fusao-e-quisicao-de-empresas.png");
+}
+
+section.module.parallax-3 {
+    background-image: url("../img/IMG_20240619_140239312_HDR.jpg");
+}
+
+section.module.parallax h1 {
+    color: #FFF;
+    text-align: center;
+    font-size: 5vw; /* Alterado para unidade relativa */
+    z-index: 50;
+    text-transform: uppercase;
+}
+
+.area-1, .area-2, .area-3 {
+    visibility: hidden;
+}
+
+nav {
+    margin: 20px 40px; /* Ajuste para centralizar o nav */
+    position: relative;
+    background-color: #000000;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin-top: 8px;
+    font-size: 1em; /* Alterado para unidade relativa */
+    background-color: #000000;
+    color: white;
+    border: #000000 solid;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+input:hover {
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    section.module h2 {
+        font-size: 1.5em; /* Ajuste para telas menores */
+    }
+
+    section.module.parallax h1 {
+        font-size: 8vw; /* Ajuste para telas menores */
+    }
+
+    nav {
+        margin: 10px 20px; /* Margens ajustadas para telas menores */
+    }
+
+    input {
+        font-size: 0.9em; /* Ajuste para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    section.module h2 {
+        font-size: 1.2em; /* Ajuste adicional para telas ainda menores */
+    }
+
+    section.module.parallax h1 {
+        font-size: 10vw; /* Ajuste adicional para telas ainda menores */
+    }
+
+    nav {
+        flex-direction: column; /* Mudança para coluna em telas muito pequenas */
+    }
+}

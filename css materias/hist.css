@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: black; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 4px black; 
+}
+
+.text {
+    font-size: 18px;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background-color: rgb(0, 0, 0);
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section.module p {
+    margin-bottom: 40px;
+}
+
+section.module:last-child {
+    margin-bottom: 0;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.module.content {
+    padding: 40px 0;
+    background: rgb(0, 0, 0);
+}
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.module.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, #000 100%);
+}
+
+section.module.parallax-1 {
+    background-image: url("https://s1.static.brasilescola.uol.com.br/be/conteudo/images/a-historia-conhecimento-sobre-acao-homens-mulheres-ao-longo-tempo-5730d1246dadb.jpg");
+}
+
+section.module.parallax-2 {
+    background-image: url("https://s2-techtudo.glbimg.com/inUoa1AjyRFDxrg5yR9CMBDBGa8=/0x0:6000x3375/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/h/p/posReQQfim0XQBCr25hQ/mapa-mental-com-brainstorm-escrito-a-mao-colorido.png");
+}
+
+section.module.parallax-3 {
+    background-image: url("https://media.slidesgo.com/storage/27776735/upload.png");
+}
+
+section.module.parallax-4 {
+    background-image: url("https://blog.even3.com.br/wp-content/uploads/2021/12/imagem_destaque_projetodepesquisa.png");
+}
+
+section.module.parallax h1 {
+    color: #FFF;
+    text-align: center;
+    font-size: 5vw; /* Tamanho responsivo */
+    z-index: 50;
+    text-transform: uppercase;
+}
+
+.area-1, .area-2, .area-3 {
+    visibility: hidden;
+}
+
+nav {
+    margin: 20px auto; /* Centralizado */
+    padding: 10px;
+    position: relative;
+    background-color: #000000;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin-top: 8px;
+    font-size: 16px; /* Tamanho ajustado */
+    background-color: #000000;
+    color: white;
+    border: #000000 solid;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px 20px; /* Adicionado padding */
+}
+
+input:hover {
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    section.module h2 {
+        font-size: 24px; /* Tamanho menor em telas menores */
+    }
+
+    section.module.parallax h1 {
+        font-size: 8vw; /* Tamanho ajustado */
+    }
+
+    nav {
+        flex-direction: column; /* Empilha os itens em telas pequenas */
+        margin-left: 20px; /* Ajuste de margens */
+        margin-right: 20px; /* Ajuste de margens */
+    }
+
+    input {
+        width: 100%; /* Largura total em telas pequenas */
+        padding: 10px; /* Ajustado para responsividade */
+    }
+}
+
+@media (max-width: 480px) {
+    section.module h2 {
+        font-size: 20px; /* Tamanho ainda menor */
+    }
+
+    section.module.parallax h1 {
+        font-size: 10vw; /* Tamanho ainda ajustado */
+    }
+}
